@@ -1,22 +1,25 @@
-
-
-//$ - é uma boa pratica, ela guarda uma referencia da tela - da api da DOM
-import CardGame from "./src/components/CardGame"; //não precisa colocar o nome index.js, porque ele indentifica automaticamente, 
-import './src/styles/elements/base.css';
+import PlayerName from './src/components/PlayerName';
+import BoardGame from "./src/objects/BoardGame";
 import './src/styles/generic/reset.css';
 import './src/styles/settings/colors.css';
+import './src/styles/elements/base.css';
 
+//$ - é uma boa pratica, ela guarda uma referencia da tela - da api da DOM
 
 const $root = document.querySelector("#root");
 
-const $htmlCardGame = CardGame()
-
 //const $htmlCardGame = CardGame() + CardGame ()// da para colocar varias, somando os parametros tanto aqui quanto no proprio insert
-
-console.log($htmlCardGame)
 
 //$root.textContent = "Henrique Soto";
 
 //$root.innerHTML = $htmlCardGame;// não utilizar, dá problemas de segurança
 
-$root.insertAdjacentHTML("beforeend", $htmlCardGame);//jeito certo de colocar o html dentro do main.
+$root.insertAdjacentHTML(
+    "beforeend",
+    `
+    ${PlayerName("Player1")}
+    ${PlayerName("Player2")}
+    ${BoardGame(6)}
+    `
+);
+    //jeito certo de colocar o html dentro do main.
