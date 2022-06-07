@@ -1,13 +1,16 @@
-//JSX
 import CardGame from "../CardGame";
-//JSimport "./style.css";
+import "./style.css";
 
 function CardFrontBack() {
 
     return /*html*/ `
-    <article class="Card-Front-Back">
+    <article class="card-front-back">
+        <div class="card -front">
         ${CardGame()}
+        </div>
+        <div class="card -back">
         ${CardGame("javascript", "Logo do JavaScript")}
+        </div>
     </article >
     `;
 }
