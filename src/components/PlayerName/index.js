@@ -1,4 +1,3 @@
-//JSX
 import "./style.css";
 //const Player = Player1
 
