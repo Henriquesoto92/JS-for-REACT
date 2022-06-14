@@ -1,7 +1,7 @@
 .score-board {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
-    align-items: center;
 }
