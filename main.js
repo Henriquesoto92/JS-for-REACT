@@ -20,7 +20,7 @@ $root.insertAdjacentHTML(
     "beforeend",
     `
     ${ScoreBoard()}  
-    ${BoardGame(6)}
+    ${BoardGame()}
     `
 );
     //jeito certo de colocar o html dentro do main.
